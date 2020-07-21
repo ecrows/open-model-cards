@@ -1,4 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Open Model Cards
+
+Visually compelling and portable model reporting for everyone.
+
+## What is Open Model Cards?
+
+Put simply: Open Model Cards is a way to lay out responsible machine learning model documentation in an easy to share and consume format, complete with interactive components and multimedia elements.  Leveraging the `create-react-app` project, we provide a simple method for compiling the resulting page into a single HTML file that can be hosted on a documentation server or personal website, or printed as a PDF for offline sharing.
+
+Open Model Cards is based on the very visually attractive ["Google Model Cards"](https://modelcards.withgoogle.com/model-reports) released by Google Research alongside the paper ["Model Cards for Model Reporting"](https://research.google/pubs/pub48120/).
+
+## Why is Open Model Cards?
+
+Open Model Cards aims to make machine learning model reporting easy-to-read, visually appealing, and flexible.  It should be easy to invlude interactive visualizations and embedded gifs and videos demonstrating model behaviour into documentation.  This is to improve the likelikhood of important documentation on ethical considerations and model limitations being read and understood by a broader audience.
+
+This project was bootstrapped with (the lovely) [Create React App](https://github.com/facebook/create-react-app).
+
+## Getting Started
+
+If you don't have any special requirements, you can build a beautiful model cards by simply editing the provided Markdown files in (directory).  If you want more fine-grained control, or want to embed say a Bokeh visualization, custom image, or similar, then you can edit the HTML directly in the provides js files under (directory).
 
 ## Available Scripts
 
@@ -27,42 +45,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
