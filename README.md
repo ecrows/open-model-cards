@@ -1,6 +1,11 @@
-# Open Model Cards
-
-Visually compelling and portable model reporting for everyone.
+<p align="center">
+    <br>
+    <img src="https://raw.githubusercontent.com/ecrows/open-model-cards/master/docs/open_model_cards_logo.png" width="380"/>
+    <br>
+<p>
+<h3 align="center">
+<p>Visually compelling and portable model reporting for everyone. 
+</h3>
 
 ## What is Open Model Cards?
 
