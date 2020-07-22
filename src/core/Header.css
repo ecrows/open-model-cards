@@ -70,13 +70,6 @@ nav.main a {
     }
 }
 
-@media (min-width: 768px) {
-    .nav.main {
-        margin-right: 3.5rem;
-        font-size: 1.375rem;
-    }
-}
-
 .header-container {
     padding: 0 24px;
 }
@@ -91,12 +84,6 @@ nav.main .text-highlight {
 
 nav.main a:hover {
     color: #e13d00 !important;
-}
-
-.home-box {
-    display: flex;
-    align-items: center;
-    margin-left: 0.5em;
 }
 
 .home-link {

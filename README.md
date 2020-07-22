@@ -6,7 +6,8 @@
 <h3 align="center">
 <p>Visually compelling and portable model reporting for everyone. 
 </h3>
-  
+
+<br/>
 
 ## What is Open Model Cards?
 

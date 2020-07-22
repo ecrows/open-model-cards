@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css';
 import { Link } from "react-router-dom";
-import HomeIcon from '@material-ui/icons/Home';
 
 function Header(props) {
   return (
@@ -12,11 +11,6 @@ function Header(props) {
                     <div className="logo">
                       <Link to="/" className="logo-link">
                           Open Model Cards
-                      </Link>
-                    </div>
-                    <div className="home-box">
-                      <Link to="/">
-                        <span className="home-link menu-item"><HomeIcon/></span>
                       </Link>
                     </div>
                   </div>

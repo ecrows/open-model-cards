@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Card from '../card/Card';
-import Header from './Header';
+//import Header from './Header';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 
@@ -35,7 +35,7 @@ function App() {
     <Router>
       <ScrollToTop>
         <div>
-          <Header/>
+          {/*<Header/>*/}
           <Switch>
             <Route path="/card">
               {cards.map(c => <Card key={c.key} data={c.card} />)}
