@@ -56,7 +56,7 @@ function Card(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" noWrap>
-            Permanent drawer
+            {data.title}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -92,7 +92,6 @@ function Card(props) {
         <div className={classes.toolbar} />
           <div className="card-navigation">
           <div className="card-content">
-           <div className="card-title"><h3>{data.title}</h3></div>
             <div className={classes.gridRoot}>
               <Grid container spacing={3}>
                 <Grid item xs={12}>

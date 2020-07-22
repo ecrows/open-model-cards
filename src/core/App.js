@@ -19,10 +19,12 @@ function loadCards() {
   const requireContext = require.context('../models', false, /\.ya?ml$/);
   const cards = []
   requireContext.keys().forEach((key) => {
+    const element = {}
     const obj = requireContext(key)
     const fileName = getFileBaseName(key)
-    obj["key"] = fileName
-    cards.push(obj)
+    element["key"] = fileName
+    element["card"] = obj
+    cards.push(element)
   });
   return cards;
 }
