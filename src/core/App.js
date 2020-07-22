@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Card from '../card/Card';
+import HomePage from './HomePage';
 //import Header from './Header';
-import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 
 import {
@@ -31,7 +31,6 @@ function loadCards() {
 
 function App() {
   const cards = loadCards()
-  console.log(cards)
 
   return (
     <Router>
@@ -39,11 +38,15 @@ function App() {
         <div>
           {/*<Header/>*/}
           <Switch>
-            <Route path="/card">
-              {cards.map(c => <Card key={c.key} data={c.card} />)}
-            </Route>
+              {cards.map(c => 
+                <Route path={"/" + c.key} key={c.key}>
+                  <Card key={c.key} data={c.card} all_cards={cards} />
+                </Route>
+              )}
+              <Route path="/">
+                <HomePage cards={cards}/>
+              </Route>
           </Switch>
-          <Footer/>
         </div>
       </ScrollToTop>
     </Router>

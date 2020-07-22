@@ -12,9 +12,12 @@ import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListSubheader from '@material-ui/core/ListSubheader';
+import BackIcon from '@material-ui/icons/ArrowBack';
 
 import ReactMarkdown from 'react-markdown'
+import { Link } from "react-router-dom";
 
+import Footer from '../core/Footer';
 import './Card.css';
 
 const drawerWidth = 280;
@@ -83,13 +86,22 @@ function Card(props) {
         }}
         anchor="left"
       >
-        <div className={classes.toolbar} />
+        <div className={classes.toolbar}>
+          <div className="back-button-box">
+            <div className="back-sub-box">
+              <Link to="/">
+                <span className="home-link menu-item"><BackIcon/></span>
+              </Link>
+            </div>
+          </div>
+        </div> 
         <Divider />
         <div className="drawer-list">
           <List>
-            {data.bullets.map(b => (
-              <a className="drawer-links" href={"#"+b.heading}>
-                <ListItem button key={b.heading}>
+            <ListSubheader>Sections</ListSubheader>
+            {data.sections.map(b => (
+              <a className="drawer-links" href={"#"+b.heading} key={b.heading}>
+                <ListItem button>
                     <ListItemText primary={b.heading} className={classes.listItemText} disableTypography/>
                 </ListItem>
               </a>
@@ -97,16 +109,20 @@ function Card(props) {
           </List>
           <Divider />
           <List>
-          <ListSubheader>Explore Models</ListSubheader>
-            <ListItem button key={"sample"}>
-              <ListItemText primary={"Another model here"} className={classes.listItemText} disableTypography/>
-            </ListItem>
-          </List>
-        </div>
+            <ListSubheader>Explore Models</ListSubheader>
+            {props.all_cards.map(c =>
+              <Link to={"./"+c.key} key={c.key} className="drawer-links">
+                <ListItem button>
+                  <ListItemText primary={c.card.title} className={classes.listItemText} disableTypography/>
+                </ListItem>
+              </Link> 
+              )}
+            </List>
+          </div>
       </Drawer>
         <main className={classes.content}>
         <div className={classes.toolbar} />
-          <div className="card-navigation">
+          <div className="card-page">
           <div className="card-content">
             <div className={classes.gridRoot}>
               <Grid container spacing={3}>
@@ -116,13 +132,11 @@ function Card(props) {
                   </div>
                   </Grid>
                     {
-                      data.bullets.map(b => 
+                      data.sections.map(b => 
                       <Grid item xs={12} sm={6} key={b.heading}>
                       <div className="point-heading" id={b.heading}>{b.heading}</div>
                       <div className="point-body">
-                        {b.points.map((a,i) =>
-                          <ReactMarkdown key={b.heading+i} source={a}/>
-                        )}
+                        <ReactMarkdown source={b.content}/>
                       </div>
                     </Grid>
                     )
@@ -130,6 +144,7 @@ function Card(props) {
                 </Grid>
               </div>
             </div>
+            <Footer/>
           </div>
       </main>
     </div>

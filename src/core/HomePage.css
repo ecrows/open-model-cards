@@ -1,4 +1,4 @@
-header {
+.homepage-header {
     height: 48px;
 }
 
@@ -9,9 +9,7 @@ nav.main {
     top: 0;
     left: 0;
     position: fixed;
-    font-family: PT Serif, Georgia, Times, serif;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
     z-index: 500;   
     background: white;
 }
@@ -30,7 +28,6 @@ nav.main {
     display: flex;
     box-sizing: border-box;
 }
-
 
 .link-list {
     display: flex;
@@ -58,7 +55,6 @@ nav.main .links {
 nav.main a {
     color: #302f2f;
     font-size: 24px;
-    letter-spacing: 1px;
     padding: 12px 8px;
     text-decoration: none;
     font-family: Roboto Condensed,Arial Narrow,Arial,sans-serif;
@@ -78,14 +74,6 @@ nav.main a {
     display: block !important;
 }
 
-nav.main .text-highlight {
-    color: #e13d00 !important;
-}
-
-nav.main a:hover {
-    color: #e13d00 !important;
-}
-
 .home-link {
     display: block;
 }
@@ -100,4 +88,14 @@ nav.main a:hover {
     align-items: center;
     display: flex;
     padding: 0 !important;
+}
+
+.homepage-card-list {
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+.homepage-main {
+    margin-bottom: 2em;
+    height: 76vh;
 }

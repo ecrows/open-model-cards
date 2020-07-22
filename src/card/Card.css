@@ -8,6 +8,10 @@
     font-family: sans-serif;
 }
 
+.card-content {
+    margin-bottom: 1em;
+}
+
 .point-heading {
     font-weight: 700;
     font-family: sans-serif;
@@ -27,4 +31,16 @@
 .drawer-links {
     text-decoration: none;
     color: #333;
+}
+
+.back-button-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.back-sub-box {
+    margin-top: 1.5em;
+    margin-right: 1.5em;
 }
