@@ -1,2 +1,4 @@
+# A model record
 card:
     title: Example Model
+    description: A description

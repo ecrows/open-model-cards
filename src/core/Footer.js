@@ -6,7 +6,7 @@ function Footer() {
     <div>
         <div className="footer">
           <div className="footnote">Powered by <a className="footerlink" href="https://github.com/ecrows/open-model-cards">Open Model Cards</a></div>
-          <div className="license"><i>Open source software under MIT License</i></div>
+          <div className="license"><i>Open source software under The MIT License</i></div>
         </div>
     </div>
   );
