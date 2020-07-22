@@ -7,3 +7,24 @@
     font-weight: 400;
     font-family: sans-serif;
 }
+
+.point-heading {
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.point-body {
+    font-weight: 400;
+    font-family: sans-serif;
+    line-height: 1.7;
+}
+
+.drawer-list {
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.drawer-links {
+    text-decoration: none;
+    color: #333;
+}
