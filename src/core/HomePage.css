@@ -44,14 +44,6 @@ nav.main .links {
     white-space: nowrap;
 }
 
-.menu-item {
-    max-height: 100%;
-    font-size: 14px;
-    padding: 0;
-    display: none;
-    float: left;
-}
-
 nav.main a {
     color: #302f2f;
     font-size: 24px;
@@ -72,10 +64,6 @@ nav.main a {
 
 .highlight {
     display: block !important;
-}
-
-.home-link {
-    display: block;
 }
 
 .logo {

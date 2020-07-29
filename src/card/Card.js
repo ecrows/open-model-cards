@@ -12,7 +12,8 @@ import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListSubheader from '@material-ui/core/ListSubheader';
-import BackIcon from '@material-ui/icons/ArrowBack';
+//import BackIcon from '@material-ui/icons/ArrowBack';
+import HomeIcon from '@material-ui/icons/Home';
 
 import ReactMarkdown from 'react-markdown'
 import { Link } from "react-router-dom";
@@ -90,7 +91,7 @@ function Card(props) {
           <div className="back-button-box">
             <div className="back-sub-box">
               <Link to="/">
-                <span className="home-link menu-item"><BackIcon/></span>
+                <span className="home-link"><HomeIcon/></span>
               </Link>
             </div>
           </div>
@@ -100,6 +101,7 @@ function Card(props) {
           <List>
             <ListSubheader>Sections</ListSubheader>
             {data.sections.map(b => (
+              b.heading !== "" &&
               <a className="drawer-links" href={"#"+b.heading} key={b.heading}>
                 <ListItem button>
                     <ListItemText primary={b.heading} className={classes.listItemText} disableTypography/>
@@ -125,16 +127,16 @@ function Card(props) {
           <div className="card-page">
           <div className="card-content">
             <div className={classes.gridRoot}>
-              <Grid container spacing={3}>
+              <Grid container spacing={5}>
                 <Grid item xs={12}>
                   <div className="point-body">
-                    <ReactMarkdown source={data.description}/>
+                    <ReactMarkdown source={data.page_heading}/>
                   </div>
                   </Grid>
                     {
-                      data.sections.map(b => 
-                      <Grid item xs={12} sm={6} key={b.heading}>
-                      <div className="point-heading" id={b.heading}>{b.heading}</div>
+                      data.sections.map((b, i) => 
+                      <Grid item xs={12} sm={6} key={i + b.heading}>
+                      <div className="point-heading" id={b.heading}>{b.heading ? b.heading : "\u00a0"}</div>
                       <div className="point-body">
                         <ReactMarkdown source={b.content}/>
                       </div>

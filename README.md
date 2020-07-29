@@ -23,7 +23,7 @@ This project was bootstrapped with (the lovely) [Create React App](https://githu
 
 ## Getting Started
 
-If you don't have any special requirements, you can build a beautiful model cards by adding or editing the provided YAML files in src/models/.  If you want more fine-grained control, or want to embed say a Bokeh visualization, custom image, or similar, then you can create your own custom Card HTML using `src/card/Card.js` as a template.
+If you don't have any special requirements, you can build a beautiful model cards by adding or editing the provided YAML files in src/models/.  The text is rendered from [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) so you can easily add simple formatting.  You can place images under a sub-directory in `public`, as in the example. If you want more fine-grained control, or want to embed say a Bokeh visualization, custom image, or similar, then you can create your own custom Card HTML using `src/card/Card.js` as a template.
 
 ## Available Scripts
 

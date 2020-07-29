@@ -10,17 +10,26 @@
 
 .card-content {
     margin-bottom: 1em;
+    max-width: 1100px;
 }
 
 .point-heading {
-    font-weight: 700;
+    font-weight: 400;
     font-family: sans-serif;
+    font-size: 13pt;
+}
+
+.point-heading-caps {
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    font-size: 7pt;
 }
 
 .point-body {
     font-weight: 400;
     font-family: sans-serif;
     line-height: 1.7;
+    font-size: 11pt;
 }
 
 .drawer-list {
@@ -37,10 +46,29 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .back-sub-box {
     margin-top: 1.5em;
-    margin-right: 1.5em;
+    margin-left: 1.5em;
+}
+
+.card-content img {
+    max-width: 95%;
+    margin: 0.5em;
+}
+
+.card-content li {
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+}
+
+.home-link {
+    display: block;
+    color: darkgrey;
+}
+
+.home-link:hover {
+    color: #333;
 }

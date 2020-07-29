@@ -5,15 +5,20 @@
 
 title: Smiling Detection in Images
 color: "#4e7dff"
-description: >
-    An example model card developed by Google Research.
-    *Mitchell, Margaret et al. “Model Cards for Model Reporting.”
-    Proceedings of the Conference on Fairness, Accountability, and Transparency
-    - FAT ’19 (2019): n. pag. Crossref. Web.*
+page_heading: |
+        An example model card adapted from one presented by Google Research within  
+        *Mitchell, Margaret et al. “Model Cards for Model Reporting.”
+        Proceedings of the Conference on Fairness, Accountability, and Transparency -
+        FAT ’19 (2019).*  
+        [[arXiv link]](https://arxiv.org/pdf/1810.03993.pdf)
 sections:
+    - heading: "Description" 
+      content: |
+        ![Smile detection mock-up](./model-images/example/smile-detection.png)  
+        Here is a pretty stock image and some information about the model.
     - heading: Details
       content: |
-        - Developed by researchers at Google and the University of Toronto, 2018, v1.
+        - Developed by researchers at Google and the University of Toronto, 2018.
         - Convolutional Neural Net.
         - Pretrained for face recognition then fine-tuned with cross-entropy loss for binary smiling classification.
     - heading: Intended Use
@@ -34,6 +39,12 @@ sections:
         - These also correspond to metrics in recent definitions of “fairness” in machine learning (cf. [link, link]), where parity across subgroups for different metrics correspond to different fairness criteria.
         - 95% confidence intervals calculated with bootstrap resampling.
         - All metrics reported at the .5 decision threshold, where all error types (FPR, FNR, FDR, FOR) are within the same range (0.04 - 0.14).
+    - heading: Caveats and Recommendations
+      content: |
+            - Does not capture race or skin type, which has been reported as a source of disproportionate errors [link].
+            - Given gender classes are binary (male/not male), which we include as male/female. Further work needed to evaluate across a
+            spectrum of genders.
+            - An ideal evaluation dataset would additionally include annotations for Fitzpatrick skin type, camera details, and environment        (lighting/humidity) details.
     - heading: Training Data
       content: |
         - CelebA [link], training data split.
@@ -44,9 +55,13 @@ sections:
     - heading: Ethical Considerations
       content: |
         - Faces and annotations based on public figures (celebrities). No new information is inferred or annotated.
-    - heading: Caveats and Recommendations
+    - heading: ""
+      content: ""
+    - heading: Quantitative Analyses
       content: |
-            - Does not capture race or skin type, which has been reported as a source of disproportionate errors [link].
-            - Given gender classes are binary (male/not male), which we include as male/female. Further work needed to evaluate across a
-            spectrum of genders.
-            - An ideal evaluation dataset would additionally include annotations for Fitzpatrick skin type, camera details, and environment        (lighting/humidity) details.
+        ![](./model-images/example/fpr.png "False Positive Rate")
+        ![](./model-images/example/fnr.png "False Negative Rate")
+    - heading: ""
+      content: |
+        ![](./model-images/example/for.png "False Ommission Rate")
+        ![](./model-images/example/fdr.png "False Discovery Rate")
