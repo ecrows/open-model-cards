@@ -4,26 +4,29 @@
     <br>
 <p>
 <h3 align="center">
-<p>Visually compelling and portable model reporting for everyone. 
+<p>Visually compelling and portable ML model reporting for everyone. 
 </h3>
 
 <br/>
 
 ## What is Open Model Cards?
 
-Put simply: Open Model Cards is a way to lay out responsible machine learning model documentation in an easy to share and consume format, complete with interactive components and multimedia elements.  Leveraging the `create-react-app` project, we provide a simple method for compiling the resulting page into a single HTML file that can be hosted on a documentation server or personal website, or printed as a PDF for offline sharing.
+Increasingly, ML researchers and developers are asked to provide documentation that covers the ethical considerations and limitations of machine learning models that they develop.  While scientific papers are often the best source of documentation for a model, there is a genuine need to communicate findings in an accessible way outside the scientific community, such that they can reach legal experts, policymakers, journalists, and the general public.
 
-Open Model Cards is based on the very visually attractive ["Google Model Cards"](https://modelcards.withgoogle.com/model-reports) released by Google Research alongside the paper ["Model Cards for Model Reporting"](https://research.google/pubs/pub48120/).
+Web-based formats are ideal for this kind of communication, but not all machine learning developers are web developers, and producing compelling web-based documentation can be time-consuming.  As this documentation is often made with non-technical stakeholders in mind, making sure it is both easily accessible and easily understood is important.
 
-## Why is Open Model Cards?
+Open Model Cards solves this problem by streamlining the production of web-based ML model documentation in an easy to share and consume format.  Leveraging `create-react-app`, we provide a simple method for compiling model documentation into a single HTML file that can be hosted on a documentation server or personal website, or printed as a PDF for offline sharing.
 
-Open Model Cards aims to make machine learning model reporting easy-to-read, visually appealing, and flexible.  It should be easy to invlude interactive visualizations and embedded gifs and videos demonstrating model behaviour into documentation.  This is to improve the likelikhood of important documentation on ethical considerations and model limitations being read and understood by a broader audience.
+The Open Model Cards template is based on the beautiful ["Google Model Cards"](https://modelcards.withgoogle.com/model-reports) released by Google Research alongside the paper ["Model Cards for Model Reporting"](https://research.google/pubs/pub48120/), and inspired by the goals of projects like [presskit.html](https://github.com/pixelnest/presskit.html) that aim to improve the experience of developers.
 
-This project was bootstrapped with (the lovely) [Create React App](https://github.com/facebook/create-react-app).
+Open Model Cards is currently targeted at developers who are comfortable running a few command line commands and writing documentation in Markdown format, though we're continuing to try to streamline the process.
 
-## Getting Started
 
-If you don't have any special requirements, you can build a beautiful model cards by adding or editing the provided YAML files in src/models/.  The text is rendered from [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) so you can easily add simple formatting.  You can place images under a sub-directory in `public`, as in the example. If you want more fine-grained control, or want to embed say a Bokeh visualization, custom image, or similar, then you can create your own custom Card HTML using `src/card/Card.js` as a template.
+## Quickstart
+
+1. [Install Node](https://nodejs.org/en/download/) on your development machine, if you haven't already.
+2. Clone this repository, navigate to the directory using a terminal, run `npm install`, and `npm start`
+3. The model card webpage will appear and dynamically update.  Add a new YAML defition to `src/models/`, or edit the existing example file.  Text is rendered from [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) so you can easily add simple formatting and links.  Place images under `public/`, as in the example.
 
 ## Available Scripts
 
