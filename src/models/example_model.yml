@@ -3,16 +3,25 @@
 
 # Mitchell, Margaret et al. “Model Cards for Model Reporting.” Proceedings of the Conference on Fairness, Accountability, and Transparency - FAT*  ’19 (2019): n. pag. Crossref. Web.
 
+# The title that will appear at the top of the page and in the side bar
 title: Smiling Detection in Images
+
+# Specify the color to use for the header bar here
 color: "#4e7dff"
+
+# Text that will appear in the full width section at the top of the page, supports Markdown
 page_heading: |
         An example model card adapted from one presented by Google Research within  
         *Mitchell, Margaret et al. “Model Cards for Model Reporting.”
         Proceedings of the Conference on Fairness, Accountability, and Transparency -
         FAT ’19 (2019).*  
         [[arXiv link]](https://arxiv.org/pdf/1810.03993.pdf)
+
+# Sections that will appear below, in a two-column grid on wider displays
 sections:
+    # Heading for the section (will be formatted and added to sidebar)
     - heading: "Description" 
+    # Content for the section, supports Markdown
       content: |
         ![Smile detection mock-up](./model-images/example/smile-detection.png)  
         Here is a pretty stock image and some information about the model.
