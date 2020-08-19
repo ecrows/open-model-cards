@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Drawer from '@material-ui/core/Drawer'
@@ -10,13 +10,16 @@ import List from '@material-ui/core/List'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import ListItem from '@material-ui/core/ListItem'
+import Tooltip from '@material-ui/core/Tooltip'
 import IconButton from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ListSubheader from '@material-ui/core/ListSubheader';
 import MenuIcon from '@material-ui/icons/Menu';
+import LinkIcon from '@material-ui/icons/Link';
 import HomeIcon from '@material-ui/icons/Home';
 import PrintIcon from '@material-ui/icons/Print';
 
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import ReactMarkdown from 'react-markdown'
 import { Link } from "react-router-dom";
 
@@ -26,6 +29,7 @@ import './Card.css';
 const drawerOffset = "12%";
 const drawerWidth = 280;
 const maxContentWidth = "82%";
+
 
 const useStyles = makeStyles((theme) => ({
   gridRoot: {
@@ -51,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     width: "auto",
     cursor: "pointer"
   },
-  printButton: {
+  appBarButton: {
     '@media print' : {
       display: "none"
     },
@@ -141,7 +145,9 @@ const useStyles = makeStyles((theme) => ({
 
 function Card(props) {
   const classes = useStyles();
+  const [justCopied, setJustCopied] = useState(false);
   const data = props.data;
+  const currentUrl = window.location.href;
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -196,15 +202,24 @@ function Card(props) {
           className={classes.appBar}
           style={{backgroundColor: data.color}}>
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <IconButton edge="start" className={classes.menuButton} aria-label="menu">
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap className={classes.appBarHeading}>
               {data.title}
             </Typography>
-            <IconButton className={classes.printButton} aria-label="print page" color="inherit">
-                <PrintIcon onClick={window.print} />
+            <Tooltip title={justCopied ? "Link copied!" : "Copy link to clipboard"} aria-label="copy link to clipboard" onOpen={() => setJustCopied(false)}>
+            <CopyToClipboard text={currentUrl} className={classes.appBarButton} onCopy={() => setJustCopied(true)}>
+              <IconButton aria-label="copy URL to clipboard" color="inherit">
+                <LinkIcon />
+              </IconButton>
+            </CopyToClipboard>
+            </Tooltip>
+            <Tooltip title="Send to PDF or Printer" aria-label="send to pdf or printer">
+            <IconButton className={classes.appBarButton} aria-label="print page" color="inherit" onClick={window.print}>
+                <PrintIcon/>
             </IconButton>
+            </Tooltip>
           </Toolbar>
         </AppBar>
           <main className={classes.content}>

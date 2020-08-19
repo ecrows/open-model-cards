@@ -91,13 +91,13 @@
         break-inside: avoid;
         display: block;
         position: relative;
-        max-width: 400px;
+        max-width: 600px;
     }
 }
 
 .card-content li {
-    margin-top: 1.0em;
-    margin-bottom: 1.0em;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 .home-link {
